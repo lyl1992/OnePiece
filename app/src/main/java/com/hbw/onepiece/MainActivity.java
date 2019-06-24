@@ -6,19 +6,28 @@ import android.os.Bundle;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+import com.hebiwen.luffy.BaseActivity;
+
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     AppCompatTextView module_1;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        module_1 = findViewById(R.id.module_1);
-        module_1.setOnClickListener(this);
+    protected int initPageLayoutId() {
+        return R.layout.activity_main;
     }
 
+    @Override
+    public void initView() {
+        super.initView();
+        module_1 = findViewById(R.id.module_1);
+    }
+
+    @Override
+    public void initEvent() {
+        super.initEvent();
+        module_1.setOnClickListener(this);
+    }
 
     @Override
     public void onClick(View v) {

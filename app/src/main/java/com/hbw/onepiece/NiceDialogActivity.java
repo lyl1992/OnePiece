@@ -1,13 +1,11 @@
 package com.hbw.onepiece;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.hebiwen.luffy.BaseActivity;
 import com.shehuan.nicedialog.BaseNiceDialog;
 import com.shehuan.nicedialog.NiceDialog;
 import com.shehuan.nicedialog.ViewConvertListener;
@@ -16,16 +14,24 @@ import com.shehuan.nicedialog.ViewHolder;
 /**
  * https://github.com/SheHuan/NiceDialog
  */
-public class NiceDialogActivity extends AppCompatActivity implements View.OnClickListener {
+public class NiceDialogActivity extends BaseActivity implements View.OnClickListener {
     AppCompatButton dialg_1, dialg_2;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nice_dialog);
+    protected int initPageLayoutId() {
+        return R.layout.activity_nice_dialog;
+    }
 
+    @Override
+    public void initView() {
+        super.initView();
         dialg_1 = findViewById(R.id.dialg_1);
         dialg_2 = findViewById(R.id.dialg_2);
+    }
+
+    @Override
+    public void initEvent() {
+        super.initEvent();
         dialg_1.setOnClickListener(this);
         dialg_2.setOnClickListener(this);
     }
