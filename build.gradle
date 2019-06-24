@@ -1,0 +1,34 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.1'
+        
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io"}
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+// 总结
+// 图片资源放到drawable-v24里面，导致7.0以下不能找到图片
+// 同理mipmap-anydpi-v26  API 26（安卓8.0）也是一样的道理，注意不同的文件对应的不同的版本。
+// implementation局限于本module，api可以让引用的工程也可以使用此jar包
+// 约束布局ConstraintLayout 是一个ViewGroup，可以在Api9以上的Android系统使用它，它的出现主要是为了解决布局嵌套过多的问题，以灵活的方式定位和调整小部件。
+//  Android启动模式 1. Standard 标准模式 2. SingleTop 栈顶复用模式 3. SingleTask 栈内复用模式 4. SingleInstance 单实例模式

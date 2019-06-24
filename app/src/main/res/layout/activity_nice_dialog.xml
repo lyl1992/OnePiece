@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <android.support.v7.widget.AppCompatButton
+        android:text="确认框"
+        android:id="@+id/dialg_1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="55dp" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:text="从下往上弹出框"
+        android:id="@+id/dialg_2"
+        app:layout_constraintTop_toBottomOf="@id/dialg_1"
+        android:layout_width="match_parent"
+        android:layout_height="55dp" />
+
+</android.support.constraint.ConstraintLayout>
