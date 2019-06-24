@@ -9,11 +9,39 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        // dex突破65535的限制
+        multiDexEnabled true
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    signingConfigs {
+        keyStore {
+            storeFile file('magician.jks')
+            storePassword "123456"
+            keyAlias "magician"
+            keyPassword "123456"
+        }
+    }
+    buildTypes {
+        debug {
+            //为debug版本的包名添加.debug后缀
+            resValue "string", "app_name", "OnePieceTest"
+            // url head
+            buildConfigField "String", "URL_ROOT_HTTP", "\"http://test.ilaw66.com/lavender/v3/\""
+
+        }
+        release {
+            resValue "string", "app_name", "OnePiece"
+            // 是否开启混淆
+            minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "URL_ROOT_HTTP", "\"https://www.ilaw66.com/lavender/v3/\""
         }
     }
 }
