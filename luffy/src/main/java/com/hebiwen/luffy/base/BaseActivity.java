@@ -1,4 +1,4 @@
-package com.hebiwen.luffy;
+package com.hebiwen.luffy.base;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;

@@ -5,7 +5,7 @@ import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 
 import com.hbw.onepiece.R;
-import com.hebiwen.luffy.BaseActivity;
+import com.hebiwen.luffy.base.BaseActivity;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 

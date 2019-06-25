@@ -6,36 +6,76 @@
     android:layout_height="match_parent"
     tools:context=".ui.ToFirstCharActivity">
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/toTextInputLayout"
+    <LinearLayout
+        android:id="@+id/toLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent">
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/toTextInputEditText"
-            android:layout_width="match_parent"
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:hint="请输入歌名"
-            android:textSize="30sp" />
+            android:layout_marginTop="10dp"
+            android:layout_weight="1">
 
-    </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/toTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:hint="请输入歌名"
+                android:textSize="30sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/toSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:padding="12dp"
+                android:text="保存"
+                android:textColor="@color/design_default_color_primary"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <TextView
-        android:paddingRight="12dp"
-        android:paddingLeft="12dp"
         android:id="@+id/toTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ellipsize="end"
-        android:lines="2"
+        android:lines="1"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
         android:textColor="@color/colorPrimary"
         android:textSize="35sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/toTextInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/toLinearLayout"
         tools:text="FHCQFHCQFHCQFHCQFCQFHCFHCFHCFHCFHCFHCFHCFHQ" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/toTextView" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/toRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/toTextView" />
 
 </android.support.constraint.ConstraintLayout>

@@ -2,7 +2,7 @@ package com.hbw.onepiece.base;
 
 import android.content.Context;
 
-import com.hebiwen.luffy.BaseApplication;
+import com.hebiwen.luffy.base.BaseApplication;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreator;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreator;

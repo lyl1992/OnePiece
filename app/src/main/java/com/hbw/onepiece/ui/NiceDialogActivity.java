@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.hbw.onepiece.R;
-import com.hebiwen.luffy.BaseActivity;
+import com.hebiwen.luffy.base.BaseActivity;
 import com.shehuan.nicedialog.BaseNiceDialog;
 import com.shehuan.nicedialog.NiceDialog;
 import com.shehuan.nicedialog.ViewConvertListener;

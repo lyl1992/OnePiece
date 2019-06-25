@@ -26,16 +26,16 @@ android {
 
 repositories {
     //添加JitPack仓库
-    maven { url "https://jitpack.io"}
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
     //基于DialogFragment的扩展，让dialog的使用更方便，https://github.com/SheHuan/NiceDialog
     api 'com.github.SheHuan:NiceDialog:1.2.0'
     //Android智能下拉刷新框架-SmartRefreshLayout，https://github.com/scwang90/SmartRefreshLayout
