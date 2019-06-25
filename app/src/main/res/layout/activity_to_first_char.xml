@@ -24,19 +24,18 @@
 
     </android.support.design.widget.TextInputLayout>
 
-
     <TextView
-        android:lines="2"
-        android:ellipsize="end"
-        android:inputType="text"
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp"
         android:id="@+id/toTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="12dp"
+        android:ellipsize="end"
+        android:lines="2"
         android:textColor="@color/colorPrimary"
-        android:textSize="30sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/toTextInputLayout"
-        tools:text="FHCQ" />
+        tools:text="FHCQFHCQFHCQFHCQFCQFHCFHCFHCFHCFHCFHCFHCFHQ" />
 
 </android.support.constraint.ConstraintLayout>

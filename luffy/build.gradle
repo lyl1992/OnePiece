@@ -41,4 +41,6 @@ dependencies {
     //Android智能下拉刷新框架-SmartRefreshLayout，https://github.com/scwang90/SmartRefreshLayout
     api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-28'
     api 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-28'
+    // 拼音包
+    api 'com.belerweb:pinyin4j:2.5.0'
 }
