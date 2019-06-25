@@ -1,5 +1,6 @@
-package com.hbw.onepiece;
+package com.hbw.onepiece.ui;
 
+import com.hbw.onepiece.R;
 import com.hebiwen.luffy.BaseActivity;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;

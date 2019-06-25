@@ -1,10 +1,11 @@
-package com.hbw.onepiece;
+package com.hbw.onepiece.ui;
 
 import android.support.v7.widget.AppCompatButton;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.hbw.onepiece.R;
 import com.hebiwen.luffy.BaseActivity;
 import com.shehuan.nicedialog.BaseNiceDialog;
 import com.shehuan.nicedialog.NiceDialog;

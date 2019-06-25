@@ -41,6 +41,8 @@ dependencies {
     //Android智能下拉刷新框架-SmartRefreshLayout，https://github.com/scwang90/SmartRefreshLayout
     api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-28'
     api 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-28'
-    // 拼音包
+    //拼音包
     api 'com.belerweb:pinyin4j:2.5.0'
+    //一个Android库，使开发人员使用SQLite数据库非常容易。 https://github.com/LitePalFramework/LitePal
+    api 'org.litepal.android:java:3.0.0'
 }

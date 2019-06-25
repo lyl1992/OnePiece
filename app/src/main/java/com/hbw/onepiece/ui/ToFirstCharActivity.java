@@ -1,10 +1,11 @@
-package com.hbw.onepiece;
+package com.hbw.onepiece.ui;
 
 import android.support.design.widget.TextInputEditText;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.TextView;
 
+import com.hbw.onepiece.R;
 import com.hebiwen.luffy.BaseActivity;
 
 import net.sourceforge.pinyin4j.PinyinHelper;
