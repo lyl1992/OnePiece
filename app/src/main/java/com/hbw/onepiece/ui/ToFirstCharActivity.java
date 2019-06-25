@@ -5,10 +5,13 @@ import android.support.design.widget.TextInputEditText;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hbw.onepiece.R;
 import com.hbw.onepiece.entity.dbtable.Song;
@@ -22,7 +25,10 @@ import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
 import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 
+import org.litepal.LitePal;
+
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -56,21 +62,22 @@ public class ToFirstCharActivity extends BaseActivity {
     public void initData() {
         super.initData();
         format = new HanyuPinyinOutputFormat();
-        songs.add(new Song("情深深雨蒙蒙", "QSSYMM"));
-        songs.add(new Song("爱江山更爱美人", "AJSGAMR"));
-        songs.add(new Song("平凡的人", "PFDR"));
 
+        songs = LitePal.findAll(Song.class);
+        // 倒叙排序
+        Collections.reverse(songs);
         mAdapter = new AdventurerBaseAdapter<Song, ToFirstCharViewHolder>(this, songs) {
             @Override
             protected void setView(ToFirstCharViewHolder holder, int position) {
-                Song bean = songs.get(position);
+                final Song bean = songs.get(position);
                 holder.item_song_name.setText(bean.getSongName());
                 holder.item_song_name_pinyin.setText(bean.getSongNameToPinYin());
 
                 holder.item_delete.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        LitePal.deleteAll(Song.class, "SongName = ?" , bean.getSongName());
+                        updateListData();
                     }
                 });
             }
@@ -111,9 +118,35 @@ public class ToFirstCharActivity extends BaseActivity {
         toSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (TextUtils.isEmpty(toTextInputEditText.getText().toString())) {
+                    Toast.makeText(ToFirstCharActivity.this, "歌名不能为空", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                Song song = new Song();
+                song.setSongName(filter(toTextInputEditText.getText().toString()));
+                song.setSongNameToPinYin(ToFirstChar(filter(toTextInputEditText.getText().toString())).toUpperCase());
+                // 查询此订单是否已存在
+                List<Song> mSongsOlder = LitePal.where("SongName = ? ", song.getSongName()).find(Song.class);
+                if(mSongsOlder.size() == 0){
+                    // 保存数据到本地数据库
+                    song.save();
+                    updateListData();
+                }else{
+                    Toast.makeText(ToFirstCharActivity.this, "不能重复保存", Toast.LENGTH_SHORT).show();
+                }
             }
         });
+    }
+
+    public void updateListData(){
+        // 清除数据
+        songs.clear();
+        // 查询全部
+        List<Song> list = LitePal.findAll(Song.class);
+        Collections.reverse(list);
+        songs.addAll(list);
+        // 更新adapter
+        mAdapter.notifyDataSetChanged();
     }
 
     // 获取汉字的首字母拼音（小写）

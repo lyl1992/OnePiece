@@ -18,6 +18,7 @@
         tools:text="平凡的人" />
 
     <TextView
+        android:textStyle="bold"
         android:id="@+id/item_song_name_pinyin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
