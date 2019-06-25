@@ -143,6 +143,7 @@ public class ToFirstCharActivity extends BaseActivity {
         List<Song> list = LitePal.findAll(Song.class);
         Collections.reverse(list);
         songs.addAll(list);
+        toTextInputEditText.setText("");
         // 更新adapter
         mAdapter.notifyDataSetChanged();
     }

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.ToFirstCharActivity">
 
     <LinearLayout
@@ -11,8 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="horizontal">
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="0dp"
@@ -26,6 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
                 android:hint="请输入歌名"
+                android:maxLength="16"
                 android:textSize="30sp" />
 
         </android.support.design.widget.TextInputLayout>
@@ -37,11 +38,11 @@
             android:gravity="center">
 
             <Button
-                android:background="@color/colorPrimary"
                 android:id="@+id/toSave"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="12dp"
+                android:background="@color/colorPrimary"
                 android:padding="12dp"
                 android:text="保存"
                 android:textColor="#ffffff"
@@ -61,7 +62,6 @@
         android:textColor="@color/colorPrimary"
         android:textSize="35sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/toLinearLayout"
         tools:text="FHCQFHCQFHCQFHCQFCQFHCFHCFHCFHCFHCFHCFHCFHQ" />
 
     <View
@@ -69,14 +69,12 @@
         android:layout_height="0.5dp"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
-        android:background="@color/colorPrimary"
-        app:layout_constraintTop_toBottomOf="@id/toTextView" />
+        android:background="@color/colorPrimary" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/toRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="vertical"
-        app:layout_constraintTop_toBottomOf="@id/toTextView" />
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
