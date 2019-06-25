@@ -37,13 +37,14 @@
             android:gravity="center">
 
             <Button
+                android:background="@color/colorPrimary"
                 android:id="@+id/toSave"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="12dp"
                 android:padding="12dp"
                 android:text="保存"
-                android:textColor="@color/design_default_color_primary"
+                android:textColor="#ffffff"
                 android:textSize="20sp" />
         </LinearLayout>
 
