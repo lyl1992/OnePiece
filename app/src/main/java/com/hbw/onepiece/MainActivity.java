@@ -1,8 +1,6 @@
 package com.hbw.onepiece;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 
@@ -10,7 +8,7 @@ import com.hebiwen.luffy.BaseActivity;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
-    AppCompatTextView module_1;
+    AppCompatTextView module_1,module_2;
 
     @Override
     protected int initPageLayoutId() {
@@ -21,12 +19,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void initView() {
         super.initView();
         module_1 = findViewById(R.id.module_1);
+        module_2 = findViewById(R.id.module_2);
     }
 
     @Override
     public void initEvent() {
         super.initEvent();
         module_1.setOnClickListener(this);
+        module_2.setOnClickListener(this);
     }
 
     @Override
@@ -35,6 +35,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.module_1:
                 Intent it = new Intent(this, NiceDialogActivity.class);
                 startActivity(it);
+                break;
+            case R.id.module_2:
+                Intent it2 = new Intent(this, SmartRefreshActivity.class);
+                startActivity(it2);
                 break;
             default:
                 break;

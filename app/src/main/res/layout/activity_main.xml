@@ -16,4 +16,14 @@
         android:text="NiceDialog"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_margin="10dp"
+        android:background="#d2d2d2"
+        android:id="@+id/module_2"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="SmartRefresh"
+        app:layout_constraintTop_toBottomOf="@id/module_1" />
+
 </android.support.constraint.ConstraintLayout>
