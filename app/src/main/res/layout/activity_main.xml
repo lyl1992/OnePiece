@@ -36,4 +36,14 @@
         android:text="LitePal SqlLite以及RecyclerView示例"
         app:layout_constraintTop_toBottomOf="@id/module_2" />
 
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_margin="10dp"
+        android:background="#d2d2d2"
+        android:id="@+id/module_4"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@id/module_3" />
+
 </android.support.constraint.ConstraintLayout>

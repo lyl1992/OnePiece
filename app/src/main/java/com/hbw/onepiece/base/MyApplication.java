@@ -2,6 +2,7 @@ package com.hbw.onepiece.base;
 
 import android.content.Context;
 
+import com.didichuxing.doraemonkit.DoraemonKit;
 import com.hebiwen.luffy.base.BaseApplication;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreator;
@@ -41,5 +42,7 @@ public class MyApplication extends BaseApplication {
         super.onCreate();
         // 初始化数据库
         LitePal.initialize(this);
+
+        DoraemonKit.install(this);
     }
 }

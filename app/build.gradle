@@ -29,12 +29,12 @@ android {
     buildTypes {
         debug {
             //为debug版本的包名添加.debug后缀
-            resValue "string", "app_name", "汉字转拼音debug"
+            resValue "string", "app_name", "敏捷开发debug"
             // url head
             buildConfigField "String", "URL_ROOT_HTTP", "\"http://test.ilaw66.com/lavender/v3/\""
         }
         release {
-            resValue "string", "app_name", "汉字转拼音"
+            resValue "string", "app_name", "敏捷开发"
             // 是否开启混淆
             minifyEnabled false
             //Zipalign优化
