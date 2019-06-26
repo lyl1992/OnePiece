@@ -9,7 +9,7 @@ import com.hebiwen.luffy.base.BaseActivity;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
-    AppCompatTextView module_1,module_2;
+    AppCompatTextView module_1,module_2,module_3;
 
     @Override
     protected int initPageLayoutId() {
@@ -21,6 +21,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         super.initView();
         module_1 = findViewById(R.id.module_1);
         module_2 = findViewById(R.id.module_2);
+        module_3 = findViewById(R.id.module_3);
     }
 
     @Override
@@ -28,6 +29,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         super.initEvent();
         module_1.setOnClickListener(this);
         module_2.setOnClickListener(this);
+        module_3.setOnClickListener(this);
     }
 
     @Override
@@ -40,6 +42,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.module_2:
                 Intent it2 = new Intent(this, SmartRefreshActivity.class);
                 startActivity(it2);
+                break;
+            case R.id.module_3:
+                Intent it3 = new Intent(this, ToFirstCharActivity.class);
+                startActivity(it3);
                 break;
             default:
                 break;

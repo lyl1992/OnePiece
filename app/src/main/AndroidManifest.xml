@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_onepiece"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.ToFirstCharActivity">
+        <activity
+            android:name=".ui.MainActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,6 +26,10 @@
 
         <activity
             android:name=".ui.SmartRefreshActivity"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".ui.ToFirstCharActivity"
             android:launchMode="singleTop" />
 
     </application>
