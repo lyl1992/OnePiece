@@ -4,6 +4,10 @@ import android.content.Context;
 
 import com.didichuxing.doraemonkit.DoraemonKit;
 import com.hebiwen.luffy.base.BaseApplication;
+import com.orhanobut.logger.AndroidLogAdapter;
+import com.orhanobut.logger.FormatStrategy;
+import com.orhanobut.logger.Logger;
+import com.orhanobut.logger.PrettyFormatStrategy;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreator;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreator;
@@ -16,6 +20,10 @@ import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 import org.litepal.LitePal;
 
 public class MyApplication extends BaseApplication {
+    /**
+     * 单例模式application
+     */
+    private static MyApplication application = null;
 
     // 上拉加载 下拉刷新
     static {
@@ -40,9 +48,20 @@ public class MyApplication extends BaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+        application = this;
         // 初始化数据库
-        LitePal.initialize(this);
+        LitePal.initialize(application);
+        // 初始化研发助手DoKit
+        DoraemonKit.install(application);
+        // 初始化log管理工具
+        FormatStrategy formatStrategy = PrettyFormatStrategy.newBuilder()
+                .tag("logger")
+                .build();
+        Logger.addLogAdapter(new AndroidLogAdapter(formatStrategy));
+    }
 
-        DoraemonKit.install(this);
+    // 单例模式中获取唯一的BaseApplication实例
+    public static MyApplication getInstance() {
+        return application;
     }
 }

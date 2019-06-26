@@ -4,9 +4,7 @@ import android.content.Intent;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 
-import com.didichuxing.doraemonkit.DoraemonKit;
 import com.hbw.onepiece.R;
-import com.hbw.onepiece.base.MyApplication;
 import com.hebiwen.luffy.base.BaseActivity;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
