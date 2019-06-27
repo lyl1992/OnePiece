@@ -52,4 +52,6 @@ dependencies {
     }
     //简单，漂亮，功能强大的android日志记录器 https://github.com/orhanobut/logger
     api 'com.orhanobut:logger:2.2.0'
+    //用于Java的快速JSON解析器/生成器。 https://github.com/alibaba/fastjson
+    api 'com.alibaba:fastjson:1.1.71.android'
 }

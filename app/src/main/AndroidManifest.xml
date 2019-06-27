@@ -32,6 +32,10 @@
             android:name=".ui.ToFirstCharActivity"
             android:launchMode="singleTop" />
 
+        <activity
+            android:name=".ui.FastJsonActivity"
+            android:launchMode="singleTop" />
+
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

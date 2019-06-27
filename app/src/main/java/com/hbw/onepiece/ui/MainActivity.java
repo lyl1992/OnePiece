@@ -50,7 +50,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(it3);
                 break;
             case R.id.module_4:
-
+                Intent it4 = new Intent(this, FastJsonActivity.class);
+                startActivity(it4);
                 break;
             default:
                 break;

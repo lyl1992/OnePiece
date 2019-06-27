@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:gravity="center"
-        android:text=""
+        android:text="fastjson"
         app:layout_constraintTop_toBottomOf="@id/module_3" />
 
 </android.support.constraint.ConstraintLayout>
