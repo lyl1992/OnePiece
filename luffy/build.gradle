@@ -43,13 +43,13 @@ dependencies {
     api 'com.belerweb:pinyin4j:2.5.0'
     //一个Android库，使开发人员使用SQLite数据库非常容易。 https://github.com/LitePalFramework/LitePal
     api 'org.litepal.android:java:3.0.0'
-    // 简称 "DoKit" 。一款功能齐全的客户端研发助手，你值得拥有。 https://github.com/didi/DoraemonKit/blob/master/Doc/android_cn_guide.md
+    //简称 "DoKit" 。一款功能齐全的客户端研发助手，你值得拥有。 https://github.com/didi/DoraemonKit/blob/master/Doc/android_cn_guide.md
     api('com.didichuxing.doraemonkit:doraemonkit:1.1.8') {
         //如果项目中已近包含以下包需要排除掉
         //exclude group: 'com.google.code.gson'
         //exclude group: 'com.google.zxing'
         //exclude group: 'com.squareup.okhttp3'
     }
-    // 简单，漂亮，功能强大的android日志记录器 https://github.com/orhanobut/logger
+    //简单，漂亮，功能强大的android日志记录器 https://github.com/orhanobut/logger
     api 'com.orhanobut:logger:2.2.0'
 }
