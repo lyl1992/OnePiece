@@ -1,13 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ui.FastJsonActivity">
 
     <android.support.v7.widget.AppCompatTextView
+        android:layout_marginTop="20dp"
         android:id="@+id/fj_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="[{'password':'123123','username':'zhangsan'},{'password':'321321','username':'lisi'}]" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/fj_tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/design_default_color_primary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fj_tv"
+        tools:text="[{'password':'123123','username':'zhangsan'},{'password':'321321','username':'lisi'}]" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/fj_tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/background_info"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fj_tv1"
+        tools:text="[{'password':'123123','username':'zhangsan'},{'password':'321321','username':'lisi'}]" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/fj_tv3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/background_warn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fj_tv2"
+        tools:text="[{'password':'123123','username':'zhangsan'},{'password':'321321','username':'lisi'}]" />
 
 </android.support.constraint.ConstraintLayout>

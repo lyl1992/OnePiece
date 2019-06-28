@@ -36,6 +36,7 @@ implementation局限于本module，api可以让引用的工程也可以使用此
 Android启动模式 1. Standard 标准模式 2. SingleTop 栈顶复用模式 3. SingleTask 栈内复用模式 4. SingleInstance 单实例模式
 tools:context=".MainActivity"作用  tools:text="" tools 属性主要针对的 模拟器 调试时候显示状态，，编译中不起作用
 Android App Bundle (Android新的应用发布格式)
+fastjson不允许实体类是匿名内部类
 */
 
 /*
