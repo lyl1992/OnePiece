@@ -36,6 +36,10 @@
             android:name=".ui.FastJsonActivity"
             android:launchMode="singleTop" />
 
+        <activity
+            android:name=".ui.EventBusActivity"
+            android:launchMode="singleTop" />
+
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

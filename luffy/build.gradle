@@ -54,4 +54,6 @@ dependencies {
     api 'com.orhanobut:logger:2.2.0'
     //用于Java的快速JSON解析器/生成器。 https://github.com/alibaba/fastjson
     api 'com.alibaba:fastjson:1.1.71.android'
+    //EventBus适用于Android和Java的事件总线，可简化活动，碎片，线程，服务等之间的通信。减少代码，提高质量。 https://github.com/greenrobot/EventBus
+    api 'org.greenrobot:eventbus:3.1.1'
 }

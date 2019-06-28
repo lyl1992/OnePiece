@@ -1,6 +1,6 @@
 package com.hbw.onepiece.entity.bean;
 
-public class HuMan {
+public class HuMan{
     public String name;
     public String sex;
     public int age;
