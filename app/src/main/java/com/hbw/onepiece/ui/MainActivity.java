@@ -15,7 +15,7 @@ import org.greenrobot.eventbus.ThreadMode;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
-    AppCompatTextView module_1, module_2, module_3, module_4, module_5;
+    AppCompatTextView module_1, module_2, module_3, module_4, module_5, module_6;
 
     @Override
     protected int initPageLayoutId() {
@@ -30,6 +30,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         module_3 = findViewById(R.id.module_3);
         module_4 = findViewById(R.id.module_4);
         module_5 = findViewById(R.id.module_5);
+        module_6 = findViewById(R.id.module_6);
     }
 
     @Override
@@ -40,6 +41,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         module_3.setOnClickListener(this);
         module_4.setOnClickListener(this);
         module_5.setOnClickListener(this);
+        module_6.setOnClickListener(this);
     }
 
     @Override
@@ -64,6 +66,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.module_5:
                 Intent it5 = new Intent(this, EventBusActivity.class);
                 startActivity(it5);
+                break;
+            case R.id.module_6:
+                Intent it6 = new Intent(this, EasyPermissionsActivity.class);
+                startActivity(it6);
                 break;
             default:
                 break;
