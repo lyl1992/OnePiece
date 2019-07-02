@@ -3,6 +3,7 @@ package com.hbw.onepiece.base;
 import android.content.Context;
 
 import com.didichuxing.doraemonkit.DoraemonKit;
+import com.hbw.onepiece.utils.ToastUtil;
 import com.hebiwen.luffy.base.BaseApplication;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.FormatStrategy;
@@ -58,6 +59,8 @@ public class MyApplication extends BaseApplication {
                 .tag("logger")
                 .build();
         Logger.addLogAdapter(new AndroidLogAdapter(formatStrategy));
+        // 初始化Toast
+        ToastUtil.init(this);
     }
 
     // 单例模式中获取唯一的BaseApplication实例

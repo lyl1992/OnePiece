@@ -2,10 +2,10 @@ package com.hbw.onepiece.ui;
 
 import android.support.v7.widget.AppCompatButton;
 import android.view.View;
-import android.widget.Toast;
 
 import com.hbw.onepiece.R;
 import com.hbw.onepiece.entity.bean.HuMan;
+import com.hbw.onepiece.utils.ToastUtil;
 import com.hebiwen.luffy.base.BaseActivity;
 
 import org.greenrobot.eventbus.EventBus;
@@ -51,7 +51,7 @@ public class EventBusActivity extends BaseActivity {
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(HuMan huMan) {
-        Toast.makeText(EventBusActivity.this, huMan.toString(), Toast.LENGTH_SHORT).show();
+        ToastUtil.getInstance().show(huMan.toString());
     }
 
 }
