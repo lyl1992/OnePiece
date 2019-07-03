@@ -44,10 +44,14 @@ fastjson不允许实体类是匿名内部类
 
 简单易用的dialog
 上拉下拉刷新框架
-拼音包
 数据库管理工具
 研发助手可直接查看本地数据库数据以及日志等
 日志管理工具
 结合RecyclerView使用的简单易用的BaseAdapter
 gradle打包配置
+功能强大的android日志记录器
+用于Java的快速JSON解析器生成器fastjson
+EventBus适用于Android和Java的事件总线,可简化活动，碎片，线程，服务等之间的通信
+权限管理
+拼音包
  */
